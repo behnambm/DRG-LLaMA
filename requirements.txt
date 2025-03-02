@@ -60,8 +60,6 @@ httpx==0.24.1
 huggingface-hub==0.14.1
 idna==3.4
 ipykernel==6.23.1
-ipython==8.13.2
-ipython-genutils==0.2.0
 isoduration==20.11.0
 jedi==0.18.2
 jinja2==3.1.2
@@ -115,7 +113,6 @@ oauthlib==3.2.2
 orjson==3.8.14
 overrides==7.3.1
 packaging==23.1
-pandas==2.0.1
 pandocfilters==1.5.0
 parso==0.8.3
 pathspec==0.11.1
@@ -154,7 +151,6 @@ rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rsa==4.9
 safetensors==0.3.1
-scikit-learn==1.2.2
 scipy==1.10.1
 semantic-version==2.10.0
 send2trash==1.8.2
