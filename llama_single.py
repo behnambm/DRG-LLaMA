@@ -212,8 +212,8 @@ def train(
         remove_unused_columns=False,
         label_names=["labels"],
         ddp_find_unused_parameters=False if ddp else None,
-        report_to="wandb" if use_wandb else None,
-        run_name=wandb_run_name if use_wandb else None,
+        report_to=None,
+        run_name=None,
         )
 
     if not ddp and torch.cuda.device_count() > 1:
