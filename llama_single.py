@@ -240,5 +240,6 @@ def train(
 
 
 if __name__ == "__main__":
-    
+    import wandb
+    wandb.init(mode='disabled')
     fire.Fire(train)
