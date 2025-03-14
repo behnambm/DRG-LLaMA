@@ -96,7 +96,7 @@ def drg_dissection(drg_34_path, train_set_path, test_set_path, id2label_path):
 
 if __name__ == "__main__":
     # Read path from the json file
-  with open('paths.json', 'r') as f:
+  with open('/content/DRG-LLaMA/paths.json', 'r') as f:
       path = json.load(f)
       drg_34_path = path["drg_34_path"]
       drg_34_dissection_path = path["drg_34_dissection_path"]

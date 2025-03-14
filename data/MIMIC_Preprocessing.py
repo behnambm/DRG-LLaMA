@@ -149,7 +149,7 @@ def merge_HC_drg(dc_summary, drg):
 
 if __name__ == "__main__":
     # Read path from the json file
-  with open('paths.json', 'r') as f:
+  with open('/content/DRG-LLaMA/paths.json', 'r') as f:
       path = json.load(f)
       dc_summary_path = path["dc_summary_path"]
       mimic_drg_path = path["mimic_drg_path"]
