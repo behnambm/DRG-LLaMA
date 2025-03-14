@@ -24,7 +24,8 @@ import torch
 
 from utils.eval_utils import cls_metrics
 from utils.gen_utils import create_folder
-
+from huggingface_hub import login
+login()
 
 with open('paths.json', 'r') as f:
         path = json.load(f)
