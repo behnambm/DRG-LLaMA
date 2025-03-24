@@ -12,8 +12,7 @@ import torch
 from datasets import load_dataset
 
 from transformers import DataCollatorWithPadding, TrainingArguments, Trainer
-# from transformers import LlamaTokenizer, LlamaForSequenceClassification
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers import LlamaTokenizer, LlamaForSequenceClassification
 from peft import (
     LoraConfig,
     get_peft_model,
@@ -25,6 +24,7 @@ import torch
 
 from utils.eval_utils import cls_metrics
 from utils.gen_utils import create_folder
+
 
 with open('paths.json', 'r') as f:
         path = json.load(f)
@@ -119,7 +119,7 @@ def train(
         os.environ["WANDB_LOG_MODEL"] = wandb_log_model
 
 
-    model = AutoModelForSequenceClassification.from_pretrained(
+    model = LlamaForSequenceClassification.from_pretrained(
         base_model, 
         num_labels=num_labels, 
         load_in_8bit=True, 
@@ -127,7 +127,7 @@ def train(
         device_map=device_map,
         cache_dir=cache_dir)
 
-    tokenizer = AutoTokenizer.from_pretrained(
+    tokenizer = LlamaTokenizer.from_pretrained(
         base_model, 
         model_max_length=cutoff_len,
         cache_dir=cache_dir)
